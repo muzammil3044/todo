@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-indigo-700 flex items-center justify-center p-4">
+    <main class="w-full max-w-lg bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+        <h1 class="text-3xl font-bold text-center text-indigo-600 mb-2">My To-Do List</h1>
+        <p class="text-center text-gray-500 mb-6">Organize your day, one task at a time.</p>
+
+        <div class="flex gap-2 mb-6">
+            <input id="taskInput" type="text" placeholder="Enter your task..."
+                class="flex-1 min-w-0 border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-500">
+            <button id="addBtn"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-3 rounded-lg transition">
+                Add
+        </button>
+        </div>
+
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold text-gray-700">Your Tasks</h2>
+            <span id="taskCount" class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">0 remaining</span>
+        </div>
+
+        <ul id="taskList" class="space-y-3"></ul>
+        <p id="emptyMessage" class="text-center text-gray-400 py-6">No tasks yet. Add your first task!</p>
+        <p class="text-xs text-center text-gray-400 mt-4">Tasks are saved in this browser.</p>
+    </main>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
